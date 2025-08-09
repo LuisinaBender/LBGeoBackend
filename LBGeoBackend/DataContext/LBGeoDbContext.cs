@@ -1,6 +1,7 @@
 ﻿using LBGeoBackend.Models;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace LBGeoBackend.DataContext
 {
     public class LBGeoDbContext : DbContext

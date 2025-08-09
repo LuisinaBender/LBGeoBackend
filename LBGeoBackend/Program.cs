@@ -1,5 +1,16 @@
+using Microsoft.AspNetCore.Builder;
+using LBGeoBackend.DataContext; 
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<LBGeoDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        new MySqlServerVersion(new Version(8, 0, 0)) 
+    )
+);
 // Add services to the container.
 
 builder.Services.AddControllers();
