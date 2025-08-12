@@ -9,7 +9,6 @@ namespace LBGeoBackend.DataContext
         public LBGeoDbContext(DbContextOptions<LBGeoDbContext> options) : base(options) { }
 
         public DbSet<Clientes> Clientes { get; set; }
-        public DbSet<Descripciones> Descripciones { get; set; }
         public DbSet<Equivalencias> Equivalencias { get; set; }
         public DbSet<Proveedores> Proveedores { get; set; }
         public DbSet<Registros> Registros { get; set; }
@@ -81,9 +80,6 @@ namespace LBGeoBackend.DataContext
             modelBuilder.Entity<Registros>()
                 .HasKey(reg => reg.id_registro);
 
-            // Descripciones
-            modelBuilder.Entity<Descripciones>()
-                .HasKey(d => d.id_descripcion);
 
             // Usuarios
             modelBuilder.Entity<Usuarios>()
@@ -107,14 +103,8 @@ namespace LBGeoBackend.DataContext
             );
 
             modelBuilder.Entity<Repuestos>().HasData(
-                new Repuestos { id_repuesto = 1, marca_auto = "Toyota", modelo_auto = "Corolla", codigo_OEM_original = "OR-100", marca_OEM = "Toyota", anio = 2020, motor = "1.8L", id_proveedor = 1, id_equivalencia = 1, precio = 15000 },
-                new Repuestos { id_repuesto = 2, marca_auto = "Ford", modelo_auto = "Fiesta", codigo_OEM_original = "OR-200", marca_OEM = "Ford", anio = 2019, motor = "1.6L", id_proveedor = 2, id_equivalencia = 2, precio = 12000 }
-            );
-
-            modelBuilder.Entity<Descripciones>().HasData(
-                new Descripciones { id_descripcion = 1, texto = "Filtro de aire original para Toyota Corolla", imagen_url = "https://http2.mlstatic.com/D_NQ_NP_616775-MLA76602933995_052024-O.webp" },
-                new Descripciones { id_descripcion = 2, texto = "Pastillas de freno originales para Ford Fiesta", imagen_url = "https://http2.mlstatic.com/D_NQ_NP_836797-MLA80954735198_122024-O.webp" +
-                "" }
+                new Repuestos { id_repuesto = 1, texto = "Filtro de aire original para Toyota Corolla", marca_auto = "Toyota", modelo_auto = "Corolla", codigo_OEM_original = "OR-100", marca_OEM = "Toyota", anio = 2020, motor = "1.8L", imagen_url = "https://http2.mlstatic.com/D_NQ_NP_616775-MLA76602933995_052024-O.webp", id_proveedor = 1, id_equivalencia = 1, precio = 15000 },
+                new Repuestos { id_repuesto = 2, texto = "Pastillas de freno originales para Ford Fiesta", marca_auto = "Ford", modelo_auto = "Fiesta", codigo_OEM_original = "OR-200", marca_OEM = "Ford", anio = 2019, motor = "1.6L", imagen_url = "https://http2.mlstatic.com/D_NQ_NP_836797-MLA80954735198_122024-O.webp", id_proveedor = 2, id_equivalencia = 2, precio = 12000 }
             );
 
             modelBuilder.Entity<RegistrosVentas>().HasData(

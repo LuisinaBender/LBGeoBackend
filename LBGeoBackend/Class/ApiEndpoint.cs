@@ -16,8 +16,6 @@
             return name switch
             {
                 nameof(Cliente) => Cliente,
-                nameof(Descripcion) => Descripcion,
-                nameof(Equivalencia) => Equivalencia,
                 nameof(Proveedor) => Proveedor,
                 nameof(Registro) => Registro,
                 nameof(RegistroVenta) => RegistroVenta,

@@ -16,6 +16,8 @@ namespace LBGeoBackend.Models
         public decimal precio_unitario { get; set; }
         public decimal precio_total { get; set; }
 
+        public bool Eliminado { get; set; }
+
         // Navegación
         public RegistrosVentas RegistroVenta { get; set; }
         public Repuestos Repuesto { get; set; }

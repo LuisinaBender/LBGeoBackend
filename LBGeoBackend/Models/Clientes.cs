@@ -9,6 +9,7 @@
         public string? email { get; set; }
         public string? direccion { get; set; }
         public int ? nro_documento { get; set; }
+        public bool Eliminado { get; set; }
 
         // Relación: Un cliente puede tener muchas ventas
         public ICollection<RegistrosVentas> Ventas { get; set; } = new List<RegistrosVentas>();

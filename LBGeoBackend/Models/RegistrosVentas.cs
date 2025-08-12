@@ -17,6 +17,7 @@ namespace LBGeoBackend.Models
         public decimal precio_total { get; set; }
         public DateTime fecha_venta { get; set; } = DateTime.Now;
 
+        public bool Eliminado { get; set; }
         // Navegación
         public Clientes Cliente { get; set; }
         public Repuestos Repuesto { get; set; }

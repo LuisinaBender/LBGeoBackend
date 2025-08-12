@@ -8,6 +8,7 @@
         public string? telefono { get; set; }
         public string? email { get; set; }
 
+        public bool Eliminado { get; set; }
         public ICollection<Repuestos> Repuestos { get; set; } = new List<Repuestos>();
 
     }

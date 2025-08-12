@@ -9,5 +9,6 @@
 
         public string? Rol { get; set; } // Puede ser "Administrador", "Cliente", etc.
 
+        public bool Eliminado { get; set; }
     }
 }
