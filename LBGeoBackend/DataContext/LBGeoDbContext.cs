@@ -93,8 +93,8 @@ namespace LBGeoBackend.DataContext
             );
 
             modelBuilder.Entity<Proveedores>().HasData(
-                new Proveedores { id_proveedor = 1, nombre = "Repuestos Rosario", dirreccion = "San Martín 234", telefono = "3414440000", email = "ventas@rosario.com" },
-                new Proveedores { id_proveedor = 2, nombre = "AutoPartes Santa Fe", dirreccion = "Bv. Oroño 789", telefono = "3414441111", email = "contacto@santafe.com" }
+                new Proveedores { id_proveedor = 1, nombre = "Repuestos Rosario", direccion = "San Martín 234", telefono = "3414440000", email = "ventas@rosario.com" },
+                new Proveedores { id_proveedor = 2, nombre = "AutoPartes Santa Fe", direccion = "Bv. Oroño 789", telefono = "3414441111", email = "contacto@santafe.com" }
             );
 
             modelBuilder.Entity<Equivalencias>().HasData(

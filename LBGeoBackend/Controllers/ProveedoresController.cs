@@ -52,6 +52,8 @@ namespace LBGeoBackend.Controllers
                 return BadRequest();
             }
 
+            // Normalizar dirección antes de guardar
+            proveedores.direccion = string.IsNullOrWhiteSpace(proveedores.direccion) ? "" : proveedores.direccion;
             _context.Entry(proveedores).State = EntityState.Modified;
 
             try
@@ -78,6 +80,8 @@ namespace LBGeoBackend.Controllers
         [HttpPost]
         public async Task<ActionResult<Proveedores>> PostProveedores(Proveedores proveedores)
         {
+            // Normalizar dirección antes de guardar
+            proveedores.direccion = string.IsNullOrWhiteSpace(proveedores.direccion) ? "" : proveedores.direccion;
             _context.Proveedores.Add(proveedores);
             await _context.SaveChangesAsync();
 
