@@ -25,6 +25,10 @@ namespace LBGeoBackend.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Proveedores>>> GetProveedores()
         {
+            // Solo devolver los proveedores activos
+            var activos = await _context.Proveedores
+                                .Where(p => !p.Eliminado) // Eliminado = false
+                                .ToListAsync();
             return await _context.Proveedores.ToListAsync();
         }
 
