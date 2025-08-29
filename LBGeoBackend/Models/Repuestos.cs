@@ -18,7 +18,7 @@ namespace LBGeoBackend.Models
         public int id_proveedor { get; set; }
 
         [ForeignKey("Equivalencia")]
-        public int id_equivalencia { get; set; }
+        public int ? id_equivalencia { get; set; }
 
         public int precio { get; set; }
 
