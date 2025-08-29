@@ -75,9 +75,11 @@ namespace LBGeoBackend.Controllers
 
         // POST: api/Repuestos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        
         [HttpPost]
         public async Task<ActionResult<Repuestos>> PostRepuestos(Repuestos repuestos)
         {
+            // Solo necesitas los IDs, no los objetos completos
             _context.Repuestos.Add(repuestos);
             await _context.SaveChangesAsync();
 

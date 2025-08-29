@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using LBGeoBackend.Models;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LBGeoBackend.Models
 {
@@ -25,11 +26,12 @@ namespace LBGeoBackend.Models
         public bool Eliminado { get; set; }
 
         // Navegación
-        public Proveedores Proveedor { get; set; }
-        public Equivalencias Equivalencia { get; set; }
+        public Proveedores? Proveedor { get; set; }
+        public Equivalencias? Equivalencia { get; set; }
         public ICollection<RegistrosVentas> Ventas { get; set; } = new List<RegistrosVentas>();
         public ICollection<Registros> Registros { get; set; } = new List<Registros>();
 
 
     }
 }
+
