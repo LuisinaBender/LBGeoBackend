@@ -19,8 +19,8 @@ namespace LBGeoBackend.Models
 
         public bool Eliminado { get; set; }
         // Navegación
-        public Clientes Cliente { get; set; }
-        public Repuestos Repuesto { get; set; }
+        public Clientes? Cliente { get; set; }
+        public Repuestos? Repuesto { get; set; }
         public ICollection<Registros> Registros { get; set; } = new List<Registros>();
 
     }
