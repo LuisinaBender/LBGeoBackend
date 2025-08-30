@@ -23,6 +23,8 @@ namespace LBGeoBackend.Models
 
         public int precio { get; set; }
 
+        public int stock { get; set; }
+
         public bool Eliminado { get; set; }
 
         // Navegación
